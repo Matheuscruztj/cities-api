@@ -20,4 +20,5 @@ CREATE EXTENSION earthdistance;
 ---
 On heroku:
 
+heroku git:remote -a <name>
 heroku addons:create heroku-postgresql:hobby-dev
