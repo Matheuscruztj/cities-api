@@ -1,9 +1,12 @@
 # Cities API
 ## Api para pesquisa de cidade, estado e países.
 
-###Endpoints:
+### Endpoints:
+
 /cities
+
 /staties
+
 /countries
 
 /distances -> informar a distância entre 2 pontos, unidades: milhas, metros, kilometros.
