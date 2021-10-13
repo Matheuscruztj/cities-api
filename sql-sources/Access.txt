@@ -1,0 +1,23 @@
+cmd: docker run -it --rm --net=host -v %cd%:/tmp postgres /bin/bash
+
+powershell: docker run -it --rm --net=host -v ${PWD}:/tmp postgres /bin/bash
+
+linux: docker run -it --rm --net=host -v $PWD:/tmp postgres /bin/bash
+---
+after access:
+
+psql -h localhost -U postgres_user_city cities -f /tmp/pais.sql
+psql -h localhost -U postgres_user_city cities -f /tmp/estados.sql
+psql -h localhost -U postgres_user_city cities -f /tmp/cidades.sql
+---
+psql -h localhost -U postgres_user_city cities
+
+will return distance in miles
+CREATE EXTENSION cube;
+
+will return distance in meters
+CREATE EXTENSION earthdistance;
+---
+On heroku:
+
+heroku addons:create heroku-postgresql:hobby-dev
